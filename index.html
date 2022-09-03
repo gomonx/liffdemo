@@ -69,16 +69,16 @@
 
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
-        alert("start send Sticker ");
-        // const sticker =  {
-        //     "type": "sticker",
-        //     "packageId": "6325",
-        //     "stickerId": "10979911"
-        //   } ;
+        alert("start send Sticker2 ");
+        const sticker =  {
+            "type": "sticker",
+            "packageId": "6325",
+            "stickerId": "10979911"
+          } ;
 
-        // await liff.sendMessages([
-        //  sticker
-        // ]);
+        await liff.sendMessages([
+         sticker
+        ]);
         // alert("send Sticker " + sticker["stickerId"]);
       }
     }
