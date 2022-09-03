@@ -75,13 +75,13 @@
 
     async function getUserProfile() {
       const profile = await liff.getProfile();
-      if(! profile){
-        return ;
+      if (profile) {
+        document.getElementById("pictureUrl").setAttribute('src', profile.pictureUrl);
+        document.getElementById("userId").append(profile.userId);
+        document.getElementById("statusMessage").append(profile.statusMessage);
+        document.getElementById("displayname").append(profile.displayName);
       }
-      document.getElementById("pictureUrl").setAttribute('src',profile.pictureUrl);
-      document.getElementById("userId").append(profile.userId);
-      document.getElementById("statusMessage").append(profile.statusMessage);
-      document.getElementById("displayname").append(profile.displayName);
+
       document.getElementById("decodedIDToken").append(liff.decodedIDToken().email());
     }
 
@@ -111,7 +111,7 @@
       // getFriendship()
       // createUniversalLink()
     }
-    
+
     main()
   </script>
 </body>
