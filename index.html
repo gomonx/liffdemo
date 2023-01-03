@@ -75,8 +75,9 @@
 
     async function getFriendship() {
       const friend = await liff.getFriendship();
-       document.getElementById("friendship").append(friend.friendFlag);
-      if(!friend.friendFlag){
+      const friendStatus = friend.friendFlag;
+       document.getElementById("friendship").append(friendStatus);
+      if(!friendStatus){
         if(confirm("คุณยังไม่ได้เป็นเพื่อนกับ Bot จะเพิ่มเพื่อนเลยไหม?")){
           // window.location = "https://line.bot/link"
         }
