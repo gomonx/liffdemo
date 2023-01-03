@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>GomonX Liff App3</title>
+  <title>GomonX Liff App</title>
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 
@@ -62,6 +62,8 @@
     }
 
     async function scanCode() {
+      const qr = await liff.scanCode();
+      document.getElementById("scanCode").append(qr.value);
     }
 
     function openWindow() {
