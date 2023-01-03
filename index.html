@@ -130,6 +130,13 @@
       getContext()
       // getFriendship()
       // createUniversalLink()
+      
+      if(liff.isLoggedIn()){
+       document.getElementById("isLoggedIn").append(' Login');
+      }else{
+       document.getElementById("isLoggedIn").append(' Not Login');
+      }
+        
     }
 
     main()
