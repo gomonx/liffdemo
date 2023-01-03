@@ -79,7 +79,11 @@
           "stickerId": "10551376"
         };
         
-        let msgText =  document.getElementById("msgBox").value;
+        let msgText = {
+          "type": "text",
+          "text": document.getElementById("msgBox").value
+        };
+           
         await liff.sendMessages([
           sticker,
           msgText
