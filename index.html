@@ -31,6 +31,7 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="path/?param=9">Link to Path</a></p>
 
+  <input type="text" id="msgBox">
   <button id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
@@ -71,19 +72,17 @@
 
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
-        // alert("start send Sticker3 ");
-        // const sticker = {
-        //   "type": "sticker",
-        //   "packageId": "6136",
-        //   "stickerId": "10551376"
-        // };
-
+      
+        const sticker = {
+          "type": "sticker",
+          "packageId": "6136",
+          "stickerId": "10551376"
+        };
+        
+        let msgText =  document.getElementById("msgBox").value;
         await liff.sendMessages([
-          {
-            "type": "sticker",
-            "packageId": "6136",
-            "stickerId": "10551376"
-          }
+          sticker,
+          msgText
         ]);
         // alert("send Sticker " + sticker["stickerId"]);
       }
