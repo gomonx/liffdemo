@@ -68,6 +68,12 @@
     }
 
     async function getFriendship() {
+      const = friend = await liff.getFriendship();
+      if(!friend.friendFlag){
+        if(confirm("คุณยังไม่ได้เป็นเพื่อนกับ Bot จะเพิ่มเพื่อนเลยไหม?")){
+          // window.location = "https://line.bot/link"
+        }
+      }
     }
 
     async function sendMsg() {
